@@ -9,19 +9,22 @@ import { Input } from "@/components/form-controllers/input";
 import { Button } from "@/components/ui/button";
 import { Form } from "@/components/ui/form";
 import { toast } from "@/lib/utils";
+import { userSchema, UserSchema } from "@/db/schema/user";
+import { zodResolver } from "@hookform/resolvers/zod";
 
 type Props = {
-	defaultValues: any;
+	defaultValues: UserSchema;
 };
 
 export function UserForm({ defaultValues }: Props) {
-	const form = useForm<any>({
+	const form = useForm<UserSchema>({
 		defaultValues,
+		resolver:zodResolver(userSchema)
 	});
 
 	const mode = useWatch({ control: form.control, name: "mode" });
 
-	const onSubmit: SubmitHandler<any> = async (data) => {
+	const onSubmit: SubmitHandler<UserSchema> = async (data) => {
 		let response;
 
 		switch (data.mode) {

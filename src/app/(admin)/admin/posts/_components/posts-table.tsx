@@ -17,9 +17,10 @@ import {
 	TableHeader,
 	TableRow,
 } from "@/components/ui/table";
+import { SelectPostModel } from "@/db/schema/post";
 
 type Props = {
-	rows: any[] | null;
+	rows: SelectPostModel[] | null;
 	columns: string[];
 };
 export async function PostsTable({ rows, columns }: Props) {

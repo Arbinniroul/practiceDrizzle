@@ -9,9 +9,10 @@ import {
 	CardHeader,
 	CardTitle,
 } from "@/components/ui/card";
+import { SelectPostModel } from "@/db/schema/post";
 
 type Props = {
-	data: any[] | null;
+	data: Pick<SelectPostModel,'id'|'title'|'updatedAt'|'shortDescription'>[] | null;
 };
 export function PostCards({ data }: Props) {
 	return (
