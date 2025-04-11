@@ -7,8 +7,8 @@
 		"build": "next build",
 		"start": "next start",
 		"lint": "next lint",
-		"db:generate": "drizzle-kit generate --config ./drizzle.config.ts",
-    "db:migrate": "drizzle-kit migrate --config ./drizzle.config.ts",
+		"db:generate": "drizzle-kit generate",
+		"db:migrate": "tsx src/db/migrate.ts",
 		"db:update": "npm run db:generate && npm run db:migrate",
 		"db:seed": "tsx src/db/seed.ts"
 	},
@@ -37,6 +37,7 @@
 		"next": "^14.2.27",
 		"next-auth": "^5.0.0-beta.19",
 		"next-themes": "^0.3.0",
+		"pg": "^8.14.1",
 		"react": "^18.3.1",
 		"react-dom": "^18.3.1",
 		"react-hook-form": "^7.52.0",
