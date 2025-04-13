@@ -12,7 +12,7 @@ import { z } from "zod";
 
 import { category } from "@/db/schema/category";
 import { comment } from "@/db/schema/comment";
-import { postTags } from "@/db/schema/posttags";
+import { postTags } from "@/db/schema/postTags";
 import { user } from "@/db/schema/user";
 
 export const post = pgTable("post", {

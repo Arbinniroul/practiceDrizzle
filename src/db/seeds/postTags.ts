@@ -1,6 +1,6 @@
 import { DB, db } from "@/db";
 import { postTags } from "@/db/schema";
-import { PostTagsSchema } from "@/db/schema/posttags";
+import { PostTagsSchema } from "@/db/schema/postTags";
 import { faker } from "@faker-js/faker";
 
 const mock = async () => {
